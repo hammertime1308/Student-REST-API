@@ -1,0 +1,31 @@
+# normal query
+GET http://localhost:8080/api/student/f71c6aa3-2132-4235-824d-067a07a03052
+###
+# deleted user query
+GET http://localhost:8080/api/student/54e13cb5-db1a-4711-9efd-bf2adb50e2cf
+###
+# non existent user query
+GET http://localhost:8080/api/student/54e13cb5-db1a-4711-9efd-bf2adb50e2cq
+
+###
+# delete correct user
+DELETE http://localhost:8080/api/student/f71c6aa3-2132-4235-824d-067a07a03052
+
+###
+# delete non existing user
+DELETE http://localhost:8080/api/student/f71c6aa3-2132-4235-824d-067a07a03055
+
+###
+# delete deleted user
+DELETE http://localhost:8080/api/student/f71c6aa3-2132-4235-824d-067a07a03052
+
+###
+POST http://localhost:8080/api/student
+Content-Type: application/json
+
+{
+    "name":"Mandar",
+    "age":10,
+    "class":8,
+    "subject":"English"
+}
